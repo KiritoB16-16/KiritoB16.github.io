@@ -3,85 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página en GitHub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        nav {
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            background-color: #333;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Página Web Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Bienvenido a Mi Página Web</h1>
+        <h1>Bienvenido a Mi Página Web Interactiva</h1>
+        <p>Explora los efectos y la interactividad en esta página</p>
     </header>
 
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Sobre Nosotros</a>
-        <a href="#">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
-    <div class="container">
-        <h2>Acerca de Nosotros</h2>
-        <p>Este es un ejemplo básico de una página web que puedes subir a GitHub Pages. Puedes personalizarla y agregar más contenido según tus necesidades.</p>
-        <button onclick="saludar()">Haz clic para saludar</button>
-    </div>
+    <section id="inicio" class="hero">
+        <h2>Descubre lo que podemos hacer</h2>
+        <button onclick="scrollToSection('servicios')">Ver Servicios</button>
+    </section>
+
+    <section id="servicios" class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Desarrollo Web</h3>
+                <p>Construimos sitios web adaptables, modernos y profesionales.</p>
+            </div>
+            <div class="card">
+                <h3>Marketing Digital</h3>
+                <p>Estrategias para que tu marca crezca en el mundo digital.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Avanzado</h3>
+                <p>Mejoramos la visibilidad de tu sitio en los motores de búsqueda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="container about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una agencia digital con pasión por la tecnología y el diseño. Nos encanta ayudar a nuestros clientes a alcanzar el éxito en línea.</p>
+    </section>
+
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
     <footer>
-        <p>Mi Página en GitHub &copy; 2024</p>
+        <p>© 2024 Mi Página Web Interactiva. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        function saludar() {
-            alert('¡Hola! Bienvenido a mi página en GitHub.');
-        }
-    </script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
